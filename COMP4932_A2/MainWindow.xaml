@@ -1,0 +1,38 @@
+﻿<Window x:Class="COMP4932_A2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:COMP4932_A2"
+        mc:Ignorable="d"
+        SizeToContent="WidthAndHeight"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0">
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_File">
+                    <MenuItem Header="Load Image" Click="AddLeftImage_Click"></MenuItem>
+                    <MenuItem Header="Save Image" Click="AddRightImage_Click"></MenuItem>
+                    <MenuItem Header="Decompress" Click="Decompression_Click"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="_Compression">
+                    <MenuItem Header="Compress" Click="Compression_Click"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="_Testing">
+                    <MenuItem Header="YCbCr" Click="ToYCrCb_Click"></MenuItem>
+                    <MenuItem Header="Y" Click="Y_Click"></MenuItem>
+                    <MenuItem Header="Cb" Click="Cb_Click"></MenuItem>
+                    <MenuItem Header="Cr" Click="Cr_Click"></MenuItem>
+                    <MenuItem Header="RGB" Click="RGB_Click"></MenuItem>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+        <Image Grid.Row="1" x:Name="leftImage"/>
+        <Image Grid.Row="2" x:Name="rightImage"/>
+    </Grid>
+</Window>
